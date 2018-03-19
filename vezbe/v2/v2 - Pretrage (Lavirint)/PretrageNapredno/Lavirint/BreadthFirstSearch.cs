@@ -15,7 +15,7 @@ namespace Lavirint
             stanjaNaObradi.Add(pocetnoStanje);
             while (stanjaNaObradi.Count > 0)
             {
-                State naObradi = stanjaNaObradi[stanjaNaObradi.Count - 1];
+                State naObradi = stanjaNaObradi[0];
 
                 if (!predjeniPut.ContainsKey(naObradi.GetHashCode()))
                 {

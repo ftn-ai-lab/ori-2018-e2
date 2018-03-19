@@ -10,6 +10,7 @@ namespace Lavirint
         State parent;
         public int markI, markJ; //vrsta i kolona
         public double cost;
+
         public State sledeceStanje(int markI, int markJ)
         {
             State rez = new State();
