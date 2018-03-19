@@ -26,10 +26,7 @@ namespace Lavirint
                     }
                     predjeniPut.Add(naObradi.GetHashCode(),null);
                     List<State> mogucaSledecaStanja = naObradi.mogucaSledecaStanja();
-                    foreach (State sledeceStanje in mogucaSledecaStanja)
-                    {
-                        stanjaNaObradi.Add(sledeceStanje);
-                    }
+                    stanjaNaObradi.InsertRange(0, mogucaSledecaStanja);
                 }
                 stanjaNaObradi.Remove(naObradi);
             }
