@@ -15,7 +15,7 @@ namespace Lavirint
             stanjaNaObradi.Add(pocetnoStanje);
             while (stanjaNaObradi.Count > 0)
             {
-                State naObradi = stanjaNaObradi[stanjaNaObradi.Count - 1];
+                State naObradi = stanjaNaObradi[0];
                 
                 if(!predjeniPut.ContainsKey(naObradi.GetHashCode()))
                 {
@@ -26,10 +26,7 @@ namespace Lavirint
                     }
                     predjeniPut.Add(naObradi.GetHashCode(),null);
                     List<State> mogucaSledecaStanja = naObradi.mogucaSledecaStanja();
-                    foreach (State sledeceStanje in mogucaSledecaStanja)
-                    {
-                        stanjaNaObradi.Add(sledeceStanje);
-                    }
+                    stanjaNaObradi.InsertRange(0, mogucaSledecaStanja);
                 }
                 stanjaNaObradi.Remove(naObradi);
             }
