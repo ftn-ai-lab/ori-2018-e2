@@ -60,9 +60,9 @@ namespace TrgovackiPutnik
             double s = 0.0;
             double sp = 0.0;
             //TODO 4 : Dopuniti operaciju selekcije
-            for (int i = 0; i < Gradovi.cBrojGradova; i++)
+            for (int i = 0; i < this.jedinke.Count(); i++)
             {
-                sp += jedinke[i].fitness(g);
+                s += jedinke[i].fitness(g);
                 if (sp <= t && t <= s)
                 {
                     retVal = i;
