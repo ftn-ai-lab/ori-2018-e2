@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MasinskoUcenje
+namespace Masinsko_Ucenje
 {
+    [Serializable]
     public class Point
     {
         public double x { get; set; }

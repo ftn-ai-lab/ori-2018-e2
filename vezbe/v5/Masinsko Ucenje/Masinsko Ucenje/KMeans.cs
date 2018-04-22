@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MasinskoUcenje
+namespace Masinsko_Ucenje
 {
     public class KMeans
     {
@@ -19,7 +19,7 @@ namespace MasinskoUcenje
             //------------  inicijalizacija -------------
             for (int i = 0; i < brojGrupa; i++)
             {
-                // TODO 5: na slucajan nacin inicijalizovati centre grupa   
+                // TODO 5: na slucajan nacin inicijalizovati centre grupa
             }
             //------------- iterativno racunanje centara ---
             for (int it = 0; it < 1000; it++)
@@ -47,17 +47,20 @@ namespace MasinskoUcenje
                 }
                 if (err < errT)
                     break;
+
+                Main.clusteringHistory.Add(Main.DeepClone(this.grupe));
             }
         }
     }
 
+    [Serializable]
     public class Cluster
     {
         public Point centar = new Point(0,0);
         public List<Point> elementi = new List<Point>();
 
         public double rastojanje(Point c)
-        {   // TODO 6: implementirati funkciju rastoajanje
+        {   // TODO 6: implementirati funkciju rastojanja
             return 0;
         }
 
@@ -66,7 +69,7 @@ namespace MasinskoUcenje
             double sX = 0;
             double sY = 0;
             double retVal = 0;
-            
+
             return retVal;
         }
     }

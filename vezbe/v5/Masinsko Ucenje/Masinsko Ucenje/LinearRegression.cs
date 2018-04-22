@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MasinskoUcenje
+namespace Masinsko_Ucenje
 {
     public class LinearRegression
     {
@@ -13,13 +13,12 @@ namespace MasinskoUcenje
 	    public void fit(double[] x, double[] y) {
             // TODO 2: implementirati fit funkciju koja odredjuje parametre k i n
             // y = kx + n
-		   
 	    }
 
         public double predict(double x)
         {   
             // TODO 3: Implementirati funkciju predict koja na osnovu x vrednosti vraca
-            // predvinjenu vrednost y = kx +n
+            // predvinjenu vrednost y
             return 0;
         }
     }
