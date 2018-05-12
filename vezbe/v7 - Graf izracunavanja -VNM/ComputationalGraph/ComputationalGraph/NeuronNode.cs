@@ -94,6 +94,7 @@ namespace ComputationalGraph
         {
             //greska svakog ulaza
             List<double> dw = new List<double>();
+            List<double> dx = new List<double>();
             double backward_signal = dz.Sum();
 
             //TODO 7: Izvrsiti propagaciju signala u nazad, prvo kroz aktivacionu funkciju,
@@ -105,7 +106,7 @@ namespace ComputationalGraph
             //df/dx1, df/dx2...
             this.gradients.Add(dw);
 
-            return dw;
+            return dx;
         }
 
         public void updateWeights(double learning_rate, double momentum)
